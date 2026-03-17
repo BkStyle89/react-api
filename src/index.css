@@ -9,5 +9,11 @@
 .card{
   width: 18rem;
   display: flex;
-  
+  min-height: 750px;
+  border: solid 2px;
+  background-color: lightskyblue
+}
+h5{
+  display: flex;
+  justify-content: center;
 }

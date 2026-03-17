@@ -32,10 +32,11 @@ useEffect(getActesses,[])
               {actresses.map(actress => (
                 <div  key={actress.id}>
                   <div className="col">
-                    <div className="card" >
+                    <div className="card rounded" >
                       <img src={actress.image} alt="" />
                       <div class="card-body">
                         <h5 class="card-title">{actress.name}</h5>
+                        <hr />
                         <h6 class="card-subtitle mb-2 text-muted ">{actress.nationality}</h6>
                         <p class="card-text">{actress.biography}</p>
                         <p>{actress.awards}</p>
@@ -48,7 +49,7 @@ useEffect(getActesses,[])
               {actors.map(actor => (
                 <div key={actor.id}>
                   <div className="col">
-                    <div class="card" >
+                    <div class="card rounded" >
                       <img src={actor.image} alt="" />
                       <div class="card-body">
                         <h5 class="card-title">{actor.name}</h5>
