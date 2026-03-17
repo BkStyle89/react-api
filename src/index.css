@@ -4,16 +4,26 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
+
 
 .card{
   width: 18rem;
   display: flex;
-  min-height: 750px;
-  border: solid 2px;
-  background-color: lightskyblue
+  min-height: 800px;
+  width: 100%;
+  border: solid 2px gold;
+  background-color: rgba(30, 30, 47)
 }
 h5{
   display: flex;
   justify-content: center;
+}
+
+img{
+  max-width: 80%;
+  margin-left: 30px;
+  border-radius: 10px;
+  
 }

@@ -8,20 +8,20 @@ export default function AppMain(){
   const [actresses,setActresses]=useState([])
 
 
-  function getActors(){
-  fetch(api_url)
-  .then(res=>res.json())
-  .then(data=>{
-    setActors(data)
+function getActors(){
+fetch(api_url)
+.then(res=>res.json())
+.then(data=>{
+  setActors(data)
   })
 }
 useEffect(getActors,[])
 
- function getActesses(){
-  fetch(api_link)
-  .then(res=>res.json())
-  .then(data=>{
-    setActresses(data)
+function getActesses(){
+fetch(api_link)
+.then(res=>res.json())
+.then(data=>{
+  setActresses(data)
   })
 }
 useEffect(getActesses,[]) 
@@ -33,14 +33,14 @@ useEffect(getActesses,[])
                 <div  key={actress.id}>
                   <div className="col">
                     <div className="card rounded" >
+                      <h5 class="card-title mt-2 text-light" >{actress.name}</h5>
                       <img src={actress.image} alt="" />
                       <div class="card-body">
-                        <h5 class="card-title">{actress.name}</h5>
-                        <hr />
-                        <h6 class="card-subtitle mb-2 text-muted ">{actress.nationality}</h6>
-                        <p class="card-text">{actress.biography}</p>
-                        <p>{actress.awards}</p>
-                        <p>{actress.birth_year} </p>
+                        <h6 class="card-subtitle mb-2 text-light d-flex justify-content-center">{actress.nationality}</h6>
+                        <p class="card-text text-light text-center">{actress.biography}</p>
+                        <p className='text-warning'>{actress.awards}</p>
+                        <p className='text-danger'>{actress.most_famous_movies}</p>
+                        <p className='text-light'>{actress.birth_year} {actress.death_year}</p>
                       </div>
                     </div>
                   </div>
@@ -50,13 +50,14 @@ useEffect(getActesses,[])
                 <div key={actor.id}>
                   <div className="col">
                     <div class="card rounded" >
+                      <h5 class="card-title mt-2 text-light">{actor.name}</h5>
                       <img src={actor.image} alt="" />
                       <div class="card-body">
-                        <h5 class="card-title">{actor.name}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted ">{actor.nationality}</h6>
-                        <p class="card-text">{actor.biography}</p>
-                        <p>{actor.awards}</p>
-                        <p>{actor.birth_year} </p>
+                        <h6 class="card-subtitle mb-2  text-light d-flex justify-content-center">{actor.nationality}</h6>
+                        <p class="card-text text-light text-center">{actor.biography}</p>
+                        <p className='text-warning'>{actor.awards}</p>
+                        <p className='text-danger'>{actor.known_for}</p>
+                        <p className='text-light'>{actor.birth_year}   {actor.death_year} </p>
                       </div>
                     </div>
                   </div>
